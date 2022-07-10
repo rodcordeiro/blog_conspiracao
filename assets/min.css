@@ -1,0 +1,54 @@
+/* Created by Rodrigo Cordeiro 
+Este arquivo css irá fazer efeito quando a tela onde a página for exibida for menor que  768pixels.
+*/
+@media  screen and (max-width: 768px) {
+/*Aqui está o css para o menu que aparece quando a tela onde a página for exibida for menor que  768pixels. */
+.navbar{display: none;}
+.minnav{display: block;}
+
+/* Aqui está o css que é aplicado a página principal */
+.secretII{display: inline;}
+.secret{display: none;}
+
+#dados, #qrcode{
+  float: none;
+  width: 90%;
+}
+
+
+/* Abaixo está o css que afeta todas as páginas */
+#conteudo{
+	width: 90%;
+}	
+
+blockquote{
+	margin: 4% 2%;
+	width: 100%;
+	overflow-x:overlay;
+}
+section{
+width: 100%;
+}
+h2{
+	margin: 5% 5px 10px 10px;
+}
+#conteudo ul{
+	margin: 10px 0 10px 7%;
+}
+li{
+	padding: 2px;
+}
+h3{
+	margin: 5% 5px 10px 10px;
+}
+
+.ref figcaption{
+	color: #666;
+	font-size: 8px;
+}
+.ref img{
+	max-height: 200px;
+	width: auto;
+	margin: 1% auto;
+}
+}

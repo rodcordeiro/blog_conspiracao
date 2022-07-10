@@ -1,0 +1,40 @@
+.abrir{
+	cursor: pointer;
+	color: #06ad3f;
+}
+.abrir .popup{
+	display: none;
+}
+.abrir.open .popup{
+	/*Faz com que apareça no centro da tela*/
+	display: block;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+	/*Estilo*/
+	background: #06ad3f;
+	color: #fff;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 6px solid #2a3035;
+	cursor: default;
+	text-align: justify-all;
+	padding: 20px;
+	height: auto;
+	font-weight: lighter;
+
+}
+.popup .title{
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.2rem;
+	font-family: sans-serif;
+	border-bottom: 2px solid #2a3035;
+	margin-bottom: 20px;
+	border-radius: 0 0 3.5px 3.5px;
+}
+.popup .texto{
+	height: 100%;
+	font-family: Square721 BT;
+}

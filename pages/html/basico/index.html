@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--
+  Criado por Rodrigo Cordeiro
+-->
+<html>
+<head>
+	<title>Entendendo o básico de HTML | Bl0g da Conspir4ção HTML</title>
+
+	<!-- Informações sobre o artigo -->
+	<meta property="article:section" content="HTML" />
+	<meta property="article:published_time" content="2019-03-26T17:00:43-03:00" />
+
+	
+
+	<!-- Definições da página -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta charset="utf-8">
+
+	<!-- Informações da página -->
+	<link rel="home" href="https://blog-da-conspiracao--conceptiveco.repl.co/">
+	<!-- Informações sobre o Site quando o link é compartilhado-->
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:image" content="https://rodcordeiro.github.io/shares/favicons/favicon-rc/android-icon-192x192.png">
+	<meta property="og:site_name" content="Bl0g da Conspir4ção HTML">
+	<meta property="og:title" content="Bl0g da Conspir4ção HTML">
+	<meta property="og:determiner" content="the">
+	<meta property="og:url" content="https://blog-da-conspiracao--conceptiveco.repl.co/">
+	<meta property="og:description" content="Blog para desenvolvimento e compartilhamento dos conhecimentos em desenvolvimento web.">
+	<meta property="og:image:secure_url" content="https://rodcordeiro.github.io/shares/favicons/favicon-rc/android-icon-192x192.png" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:description" content="Blog para desenvolvimento e compartilhamento dos conhecimentos em desenvolvimento web." />
+	<meta name="twitter:title" content="Bl0g da Conspir4ção HTML" />
+	<meta name="twitter:site" content="@drigocordeiro13" />
+	<meta name="twitter:image" content="https://rodcordeiro.github.io/shares/favicons/favicon-rc/android-icon-192x192.png" />
+	<meta name="twitter:creator" content="@drigocordeiro13" />
+	<link rel="prefetch" href="https://blog-da-conspiracao--conceptiveco.repl.co/">
+	<link rel="prerender" href="https://blog-da-conspiracao--conceptiveco.repl.co/">
+	<meta itemprop="name" content="Bl0g da Conspir4ção HTML" />
+	<meta itemprop="url" content="https://blog-da-conspiracao--conceptiveco.repl.co/" />
+	<meta property="description" content="Blog para desenvolvimento e compartilhamento dos conhecimentos em desenvolvimento web.">
+	<!-- Outros dados como o site, como permissão para indexação do site, faixa etária, idioma, etc. -->
+	<meta name="robots" content="index">
+	<meta name="rating" content="general">
+	<meta name="language" content="pt-br">
+	<!-- Informações sobre o Autor -->
+	<meta property="author" content="Rodrigo Cordeiro">
+	<meta name="dc.creator.address" content="rodrigomendoncca@gmail.com">
+
+	<!-- ALTERAR A COR DA ABA -->
+	<meta name="theme-color" content="#666666">
+	<meta name="msapplication-TileColor" content="#666666">
+	<meta name="msapplication-navbutton-color" content="#666666">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#666666">
+
+	<!-- FAVICON -->
+	<link rel="apple-touch-icon" sizes="57x57" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/favicon-16x16.png">
+	<link rel="manifest" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/manifest.json">
+	<meta name="msapplication-TileImage" content="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/ms-icon-144x144.png">
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-144x144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-114x114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-72x72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/apple-icon-57x57.png">
+	<!-- basic favicon -->
+	<link rel="shortcut icon" href="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-rc/favicon-32x32.png">
+	<!-- /FAVICON-->
+
+	<!-- LINKAGENS -->
+	<link rel="stylesheet" type="text/css" href="../../../assets/main.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/min.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/print.css" media="print">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<script src="../../../assets/script.js"></script>
+</head>
+<body>
+
+	<div id="menu">
+		<nav class="navbar">
+			<span>Bl0g da C0nsp1r4ção</span>
+			<ul>
+				<a href="../../../"><li>Home</li></a>
+				<a href="../index.html"><li class="ativo">HTML</li></a>
+				<a href="../../css/index.html"><li>CSS</li></a>
+				<a href="../../js/index.html"><li>JavaScript</li></a>
+				<a href="../../../index.html#contatos"><li>Contato</li></a>
+			</ul>
+		</nav>
+		<nav class="minnav">
+			<span class="icon" id="open-menu"><i class="fas fa-bars"></i></span>
+			<span class="logo">Bl0g da C0nsp1r4ção</span>
+		</nav>
+	</div>
+	<div id="minnav-menu" class="navmenu">
+		<span id="close-menu">X</span>
+		<ul>
+			<a href="../../../"><li>Home</li></a>
+			<a href="../index.html"><li class="ativo">HTML</li></a>
+			<a href="../../css/index.html"><li>CSS</li></a>
+			<a href="../../js/index.html"><li>JavaScript</li></a>
+			<a href="../../../index.html#contatos"><li>Contato</li></a>
+		</ul>
+	</div>
+	<div id="conteudo">
+		<h1 class="titulo_pag">Afinal, o que é o HTML?</h1>
+		<span id="data">Publicado em XX/XX/XX <span onclick="imprimir()">| <i class="fas fa-print"></i> Imprimir o artigo</span></span>
+		<br>
+		<br>
+		<p>
+			<span class="special">H</span>yper<span class="special">t</span>ext <span class="special">M</span>arkup <span class="special">L</span>anguage é uma linguagem de marcação voltada para internet, desenvolvida por um cientista para que pudesse publicar seus artigos de forma que atingisse vários cantos do mundo, compartilhando e recebendo conhecimento. Ah, sempre que ver o <span class="especial">&#x1F50D;</span> <span class="secret">passe o mouse por cima</span> <span class="secretII">clique na palavra</span>, a palavra esconde algumas coisas como citações, referências e introduções. <span class="secretII">Para fechar o pop-up basta clicar em qualquer canto da tela.</span>
+		</p>
+		<h2>O HTML:</h2>
+		<p>
+			Vamos começar a entender o HTML. O HTML é escrito através de <span class="abrir">tags &#x1F50D;<span class="popup"><span class="title">&lt;html&gt; e &lt;/html&gt;</span> <span class="texto"> por exemplo, que são as tags de padronização de início e fim da marcação em HTML.</span></span></span>, compostas em sua maioria por uma tag de início <span class="especial">&lt;tag&gt;</span> e uma tag de encerramento <span class="especial">&lt;/tag&gt;</span>. Existem algumas tags em exceção que <span class="especial">não precisam de encerramento</span>, como por exemplo a tag <span class="especial">&lt;img&gt;</span> que serve para incluir imagens a página HTML, tais tags são por sí só autosuficientes e portanto não necessitam de fechamento. Porém entretanto todavia podem ser fechadas incluindo a <span class="especial">/</span> ao final da tag (mais exemplos no decorrer do texto). O HTML está atualmente em sua 5ª versão, sendo chamado de <span class="especial">HTML5</span> e suas tags são conhecidas como <span class="especial">semânticas</span> pois são voltadas a um html mais limpo, claro e conciso.  
+		</p>
+		<p>
+			Vamos ver na prática:
+		</p>
+		<blockquote>
+			<pre>
+&lt;!DOCTYPE html&gt;<span class="code">
+&lt;html&gt;
+&nbsp;&nbsp;&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;</span>Título da página<span class="code">&lt;/title&gt;
+&nbsp;&nbsp;&lt;/head&gt;
+&nbsp;&nbsp;&lt;body&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;Conteúdo da página <span class="code">
+&nbsp;&nbsp;&lt;/body&gt;
+&lt;/html&gt;</span>
+			</pre>
+		</blockquote>
+		<p>
+			Vamos explicar as tags:
+		</p>
+		<ul>
+			<li><span class="special">!DOCTYPE html</span>: Define o tipo do arquivo como sendo HTMLv5, a versão mais atual do HTML.</li>
+			<li><span class="special">html</span> - Padroniza toda a informação que será exibida em HTML, </li>
+			<li><span class="special">head</span> - Cabeçalho, como o próprio nome sugere, é o cabeçalho da página. Nele estão contidas as <span class="abrir">Meta tags &#x1F50D;<span class="popup"><span class="title">Meta tags</span> <span class="texto">são tags que contém informações sobre o site, como classificação etária, se pode aparecer no google, palavras-chave, criador, se é um blog, informações de compartilhamento da página, etc...</span></span></span> e outras informações como <span class="abrir">links externos &#x1F50D;<span class="popup"><span class="texto">Links para arquivos de estilo, javascript, tags de estilo, scripts...</span></span></span> e outras informações que não serão exibidas na página.</li>
+			<li><span class="special">title</span> - Título da página. É o título que será exibido na aba do navegador.</li>
+			<li><span class="special">body</span> - O body contém todo o conteúdo da página, nele consta tudo que será exibido pelo navegador.</li>
+		</ul>
+
+		<p>
+			Ok, agora já vimos o formato básico para <span class="especial">toda página html</span>. Vamos ao como escrever HTML:
+		</p>
+
+		<h2>Antes de começar, tome nota!</h2>
+		<p>
+			Existem diversos editores voltados para códigos e que podem ser utilizados para criar páginas em html (existem inclusive editores online com várias funcionalidades bem bacanas como o <span class="especial"><a href="https://repl.it/" target="_blank">Repl.it</a></span>, que costumo utilizar com meus amigos), mas você pode utilizar qualquer editor de texto (do windows, do linux, aplicativos no celular) para escrever uma página em HTML, basta no momento em que for salvar o arquivo alterar para que possa salvar como html. Veja abaixo como fazer no bloco de notas do Windows:
+		</p>
+		<div class="ref">
+			<img src="img/1558476365.gif" alt="Passo a Passo para criar páginas com o notepad" title="Passo a Passo para criar páginas com o notepad"><br>
+			<span>Passo a Passo para criar páginas com o notepad | &copy; Rodrigo Cordeiro 2019</span>
+		</div>
+
+
+		<h2>Beleza!! Agora vamos colocar os textos!</h2>
+		<p>
+			Vamos começar pelos títulos:
+			Para a formatação básica dos textos em html podemos utilizar títulos, parágrafos e o <span class="abrir">span &#x1F50D;<span class="popup"><span class="title">&lt;span&gt;O que é o span?&lt;/span&gt;</span> <span class="texto">São tags sem formatação específica que podem ser utilizadas para formatar determinado pedaço de texto de forma específica.</span></span></span>. 
+		</p>
+		<h3>Títulos</h3>
+		<p>Os títulos são organizados de forma hierarquica em <span class="especial">6 níveis</span>, incluindo o título principal e subtítulos, portanto possuem um pradrão pré-estabelecido (também pode ser alterado através do <span class="abrir">css &#x1F50D;<span class="popup"><span class="title"><strong>Cascading Style Sheets</strong> ou <strong>Folha de estilos</strong></span> <span class="texto"> é o nome do arquivo ou da marcação voltada a estilização do HTML. Te explico melhor mais pra frente, foca nos título padawan.</span></span></span>) e auxiliam na organização visual da página. São eles:</p>
+		<ul>
+			<li><span class="especial">&lt;h1&gt;</span> - Título principal da página. </li>
+			<h1 class="normal">Título em h1</h1>
+			<li><span class="especial">&lt;h2&gt;</span> - Título secundário da página, o subtítulo.</li>
+			<h2 class="normal">Subtítulo em h2</h2>
+			<li><span class="especial">&lt;h3&gt;</span> - Subtítulo.</li>
+			<h3 class="normal">Subtítulo em h3</h3>
+			<li><span class="especial">&lt;h4&gt;</span> - Subtítulo.</li>
+			<h4 class="normal">Subtítulo em h4</h4>
+			<li><span class="especial">&lt;h5&gt;</span> - Subtítulo.</li>
+			<h5 class="normal">Subtítulo em h5</h5>
+			<li><span class="especial">&lt;h6&gt;</span> - Subtítulo.</li>
+			<h6 class="normal">Subtítulo em h6</h6>
+
+		</ul>
+		<blockquote><pre><span class="code">
+&lt;h1&gt;</span>Título<span class="code">&lt;/h1&gt;</span><span class="code">
+&lt;h2&gt;</span>Subtítulo<span class="code">&lt;/h2&gt;</span><span class="code">
+&lt;h3&gt;</span>Subtítulo<span class="code">&lt;/h3&gt;</span><span class="code">
+&lt;h4&gt;</span>Subtítulo<span class="code">&lt;/h4&gt;</span><span class="code">
+&lt;h5&gt;</span>Subtítulo<span class="code">&lt;/h5&gt;</span><span class="code">
+&lt;h6&gt;</span>Subtítulo<span class="code">&lt;/h6&gt;</span>
+		</pre>
+		</blockquote>
+		<h3>Páragrafos</h3>
+		<p>Os parágrafos, bem... são os parágrafos! Para criar os parágrafos utilizamos a tag <span class="especial">&lt;p&gt;</span> e fechamos com <span class="especial">&lt;/p&gt;</span>. Veja um exemplo:</p>
+		<blockquote>
+<pre><span class="code">
+&lt;p&gt;</span>Este é um parágrafo<span class="code">&lt;/p&gt;
+&lt;p&gt;</span>Este é outro parágrafo<span class="code">&lt;/p&gt;</span>
+</pre>
+	</blockquote>
+
+	<h2>Vamos organizar o conteúdo!</h2>
+	<p>
+		Dentre as diversas tags que podemos utilizar, a mais comum que utilizaremos é a tag <span class="abrir">&lt;div&gt; &#x1F50D;<span class="popup"><span class="title">&lt;div&gt; e &lt;/div&gt;</span><span class="texto">, permitem uma maior estilização com o css e servem para organização de qualquer elemento da página.</span></span></span> para agrupar os itens, temos também <span class="especial">&lt;section&gt;</span>, <span class="especial">&lt;article&gt;</span>, <span class="especial">&lt;header&gt;</span>, <span class="especial">&lt;footer&gt;</span>, entre outras.
+	</p>
+	<h3>Entendendo as tags</h3>
+		<ul>
+			<li>
+				As tags <span class="especial">&lt;div&gt;</span> são utilizadas para a formatação da página, com ela pode-se definir seções da página, trecho de artigos, elementos na página, etc;
+			</li>
+			<li>
+				A tag <span class="especial">&lt;section&gt;</span> serve para definir uma seção do documento, ou seja, um trecho do documento. A tag <span class="especial">&lt;section&gt;</span> é uma tag semântica, incluída a partir do HTML5;
+			</li>
+			<li>
+				A tag <span class="especial">&lt;article&gt;</span> é outra tag semântica e é utilizada para definir artigos na página;
+			</li>
+		</ul>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<footer>
+	<p>&copy;2019 Rodrigo Cordeiro</p>
+</footer>
+</html>

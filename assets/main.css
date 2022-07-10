@@ -1,0 +1,291 @@
+/*
+ ----// Created by Rodrigo Cordeiro  //----
+
+ O 'main.css' contém estilos que são usados em mais de uma página(como o menu e formulários) e o estilo da página;
+ O 'min.css' contém os estilos aplicados a página em formato minimizado (versão mobile);
+ O 'print.css' contém os estilos aplicados a página quando ela é selecionada para imprimir;
+ O 'pag.css' contém os estilos aplicados as páginas.
+  Os estilos estão explicados em comentários como este, alguns talvez possuam explicações e dicas.
+*/
+
+/*Estou importando algumas fontes que gosto, normalmente usamos o Google Fonts (https://fonts.google.com/) mas as vezes eu encontro algumas fontes por ai que eu gosto então quero colocá-las no meu site. Como sou relativamente(lê-se 'MUITO') teimoso dei meu jeito de fazer isso.
+ Utilizando o github pages você pode compartilhar um site estático (como esse, que não tem interação com banco de dados ou php, utiliza apenas html, css e js) ou arquivos css ou js de modo que você possa utilizá-los em outros sites então fiz o seguinte:
+ - Peguei a fonte que quis e gerei vários formatos para utilização online através do site https://transfonter.org/;
+ - Baixei a o arquivo e upei no meu repositório do github que uso para disponibilizar arquivos para minhas páginas;
+ - Usei o '@fontface' para direcionar a busca da fonte na minha página e importei o arquivo atráves do '@import url()';
+
+  Para entender melhor o Fontface acesse https://tableless.com.br/font-face-fonts-externas-na-web/
+ */
+@import url('https://rodcordeiro.github.io/shares/fonts/AlbertsthalTypewriter/font.css');
+@import url('https://rodcordeiro.github.io/shares/fonts/Square721BT-Roman/font.css');
+/* Aqui estou utilizando o mesmo método @import porém para importar outros arquivos */
+@import url('pag.css');
+@import url('tooltip-box.css');
+@import url('load.css');
+
+/*Os elementos por padrão vem com margem e padding (espaçamento), então com o código abaixo dizemos para o navegador retirar esse estilo, de modo que nosso estilo (que vamos por depois) seja o único. 
+Essa técnica (de retirar a margem e padding padrão) é normalmente colocado como 'normalyze', então se usar algum template ou algo assim e tiver o 'normalyze.css' é isso. */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* Todas as páginas */
+/* Define que o fundo da página não vai ser efetivamente branco, vai ser algo puxado para um tom 'gelo', enfim. A cor do texto será um cinza escuro e a fonte padrão é sem serifa. */
+body{
+	background: #f9f9f9;
+	color: #333;
+	font-family: sans-serif;
+}
+
+footer p{
+	margin: 20px auto;
+	text-align: center;
+}
+
+/* MENU */
+
+/*Este é o menu exibido no site em versão desktop, ou seja, em telas com mais de 768px de largura.*/
+/*Define a altura do menu e a borda verde em baixo */
+#menu{
+	border-bottom: 3px solid #06ad3f;
+	height: 15vh;
+}
+/*Afeta os links nos menus */
+#menu nav a{
+	color:#333;
+	text-decoration: none;
+}
+
+/*Menu versão desktop */
+.navbar span{
+	font-family: courier new;
+	font-size: 40px;
+	border-bottom: 3px solid #06ad3f;
+}
+.navbar{
+	width: 80%;
+	margin: 10px auto;
+	transform: translate(0,30%);
+	font-family: square721 BT;
+}
+.navbar ul{
+	float: right;
+}
+.navbar ul li{
+	display: inline-flex;
+	transform: translate(0,50%);
+	padding: 5px;
+	font-size: 1.2em;
+}
+.navbar ul li:hover{
+	border-bottom: 2px solid #06ad3f;
+	transition: .1s;
+}
+
+/*Menu mobile */
+.minnav{
+	display: none;
+}
+.minnav .logo{
+  position: relative;
+	font-family: 'Courier New';
+	font-size: 1.3rem;
+	border-bottom: 3px solid #06ad3f;
+	float: right;
+	margin: 2vh;
+}
+.minnav .icon {
+	float: left;
+  margin: 10%;
+}
+/*Afeta o menu mobile */
+#minnav-menu{
+  position: absolute;
+  height: 85vh;
+  width: 100%;
+  background: #f9f9f9;
+  z-index: 20;
+  }
+#minnav-menu span{
+  top: 5%;
+  left: 15%;
+  font-size: 2em;
+  position: relative;
+}
+#minnav-menu ul{
+  font-family: 'Courier New';
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 21;
+  list-style: none;
+  font-size: 1.5em;
+}
+#minnav-menu ul li{
+  padding: 15px;
+}
+#minnav-menu ul li:hover{
+	background:  #06ad3f;
+  color: #fff;
+	transition: .1s;
+}
+#minnav-menu a{
+  text-decoration: none;
+  color: #333;
+}
+
+/*Faz com que o menu mobile seja exibido:
+.menu - Default, não é exibido;
+.menu.open - Menu acionado.
+Isto é feito através de JS */
+.navmenu{display: none;}
+.navmenu.open{display: block;}
+/* Coloquei esta classe para mostrar no menu qual a seção em que estamos mexendo, no html eu coloquei <a href="#"><li class="ativo">HTML</li></a> por exemplo */
+.ativo{
+	border-bottom: 2px solid #06ad3f;
+}
+
+/* Home */
+header{
+	background: url('https://media.giphy.com/media/WoD6JZnwap6s8/giphy.gif');
+	background-size: cover;
+	background-attachment: fixed;
+	height: 85vh;
+	width: 100%;
+	background-color: #333;
+	color: #fff;
+	text-shadow: 3px 5px 4px #000;
+}
+.present{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	border:1px solid #06ad3f;
+	padding: 20px;
+	height: 100px;
+	background: rgba(53,53,53,.9);
+}
+.present h1{
+	font-family: 'Courier New';
+	font-size: 3em;
+}
+
+.present p{
+	font-family: 'Square721 BT';
+	font-size: 1.5em;
+	text-align: center;
+}
+#apresentacao{
+	margin: 10% auto;
+}
+
+#contatos{
+	height: 50vh;
+	margin: 10px auto;
+}
+#dados{
+	float: left;
+	width: 50%;
+}
+#dados ul{
+	list-style: square;
+}
+#dados ul a{
+	color: #333;
+	text-decoration: none;
+	padding: 5px;
+	align-content: vertical;
+	width: auto;
+}
+.secretII{display: none;}
+#qrcode{
+	float: right;
+	width: 50%;
+}
+#qrcode img{
+	margin: 10px 20%;
+}
+.writing{
+	border-left: 3px solid white;	
+	animation: escrever 0.5s linear infinite;
+}
+@keyframes escrever{
+	0%{opacity: 0;}
+	20%{opacity: 1;}
+	100%{opacity: 0;}
+}
+@-webkit-keyframes escrever{
+	0%{opacity: 0;}
+	20%{opacity: 1;}
+	100%{opacity: 0;}
+}
+@-moz-keyframes escrever{
+	0%{opacity: 0;}
+	20%{opacity: 1;}
+	100%{opacity: 0;}
+}
+@-o-keyframes escrever{
+	0%{opacity: 0;}
+	20%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+
+/* Formulários */
+
+label{
+	padding: 5px 8px;
+}
+input[type="text"],input[type="text"]:focus{
+	padding: 2px;
+	margin: 5px;
+	width: 350px;
+	border: none;
+	outline: none;
+	font-size: 1.3em;
+	background: transparent;
+}
+input[type="file"],input[type="file"]:focus{
+	padding: 2px;
+	margin: 5px;
+	width: 350px;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	background: transparent;
+}
+input[type="submit"]{
+	padding: 2px;
+	margin: 5px;
+	margin-left: 15%;
+	border: 2px solid #06ad3f;
+	border-radius: 5px;
+	outline: none;
+	font-size: 1.3em;
+	background: transparent;
+}
+input[type="submit"]:hover{
+	background: #06ad3f;
+	color: #fff;
+	cursor: pointer;
+}
+
+textarea,textarea:focus{
+	padding: 2px;
+	margin: 10px;
+	width: 350px;
+	height: 100px;
+	border: 2px solid #06ad3f;
+	outline: none;
+	font-size: 1.3em;
+	background: transparent;
+}
+.input{
+	border-bottom: 2px solid #06ad3f;
+	padding: 5px;
+	margin: 2px;
+	width: 350px;
+}

@@ -1,0 +1,114 @@
+/* Created by Rodrigo Cordeiro */
+
+.titulo_pag{
+	line-height: 40px;
+}
+#logo{
+	display: none;
+	height: 80px;
+	width: auto;
+}
+
+#conteudo{
+	width: 60%;
+	margin: 5% auto;
+}
+
+.titulo_pag{
+	text-align: center;
+	padding: 10px;
+}
+#conteudo p{
+	font-size: 1.2em;
+	text-align: justify;
+	font-family: square721 BT;
+	margin-bottom: 10px;
+}
+button{
+	padding: 5px 10px;
+	font-size: 20px;
+	margin: 10px;
+	box-sizing: border-box;
+	box-shadow: 5px 6px 8px #666;
+	font-family: serif;
+}
+blockquote{
+	margin: 4% 2%;
+	width: 60%;
+	border-left: 6px solid #06ad3f;
+	background: rgba(60,60,60,1);
+	border-radius: 0px 5px 5px 0px;
+	color: lightgray;
+}
+pre{
+	padding: 10px;
+	font-family: 'Courier New';
+	line-height: 1.3;
+}
+.code{
+	color: #6bffa0;
+}
+.special{
+	color: #06ad3f;
+	font-style: italic;
+	font-family: sans-serif;
+}
+.especial{
+		color: #06ad3f;
+}
+h2{
+
+	margin: 5% 5px 10px 10px;
+}
+#conteudo ul{
+	margin: 10px 0 10px 7%;
+	list-style: decimal-leading-zero;
+	font-family: 'Courier New';
+	font-size: 1.1em;
+	color: #666;
+}
+li{
+	padding: 2px;
+}
+.normal{
+	margin: 0;
+	padding: 0;
+}
+h3{
+	margin: 5% 5px 10px 10px;
+}
+.ref figcaption{
+	color: #666;
+	font-size: 12px;
+}
+.ref img{
+	max-height: 400px;
+	width: auto;
+	margin: 1% auto;
+}
+#data{
+	font-size: 13px;
+	float: right;
+	color: #666;
+}
+#data span{
+	cursor: pointer;
+}
+#conteudo ol{
+	margin: 20px 0 10px 7%;
+	list-style: decimal-leading-zero;
+	font-family: 'Courier New';
+	font-size: 1.3em;
+	color: #666;
+
+}
+ol li{
+	padding: 2px;
+}
+#conteudo ol a{
+	text-decoration: none;
+	color: #1da04a;
+}
+#conteudo ol a:active, #conteudo ol a:hover,#conteudo ol a:visited {
+	color: #666;
+}

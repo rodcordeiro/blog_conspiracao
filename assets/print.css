@@ -1,0 +1,13 @@
+/* Created by Rodrigo Cordeiro 
+Este arquivo css irá fazer efeito quando a página for selecionada para impressão.
+*/
+#menu{
+	display: none;
+}
+
+#logo{
+	display: block;
+}
+.ref{display: none;}
+
+#conteudo p{font-size: 1rem;}
